@@ -11,10 +11,10 @@ request.get(url, (err, response, body) => {
   const count = {};
   for (const todo of todos) {
     if (todo.completed) {
-      if (count[todo.userID]) {
-        count[todo.userID] = count[todo.userID] + 1;
+      if (count[todo.userId]) {
+        count[todo.userId] = count[todo.userId] + 1;
       } else {
-        count[todo.userID] = 1;
+        count[todo.userId] = 1;
       }
     }
   }
