@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const request = require("request");
+const request = require('request');
 const url = process.argv[2];
 
 request.get(url, (err, response, body) => {
@@ -11,8 +11,8 @@ request.get(url, (err, response, body) => {
   const results = JSON.parse(body).results;
   for (const film of results) {
     for (const charUrl of film.characters) {
-      const charID = charUrl.split("/")[5];
-      if (charID === "18") {
+      const charID = charUrl.split('/')[5];
+      if (charID === '18') {
         count++;
       }
     }
